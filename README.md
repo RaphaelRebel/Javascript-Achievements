@@ -14,5 +14,5 @@ In het het bestand  [index.html](index.html) houd je een overzicht bij van wat j
 **Dit overzicht zet je op je eigen Ma Cloud website en houd je up-to-date!**
  
 **HIER is de link**
-http://22503.hosts1.ma-cloud.nl/Javascript-Achievements/index.html
+http://22503.hosts1.ma-cloud.nl/Javascript-Achievements/main.html
 
