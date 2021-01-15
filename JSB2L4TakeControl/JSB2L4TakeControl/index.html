@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Alvast de variabele blokken en button 1 declareren die we zo gaan gebruiken
+      let alleBlokjes, button1;
+
+      // Dit is de start function. Roep deze aan als alles is geladen
+      let start = () => {
+        alleBlokjes = document.querySelectorAll(".blokjes");
+
+        button1 = document.getElementById("button-rood");
+        button1.addEventListener("click", function () {
+          veranderClass("blokje--rood");
+        });
+
+        button2 = document.getElementById("button-blauw");
+        button2.addEventListener("click", function () {
+          veranderClass("blokje--blauw");
+        });
+
+        button3 = document.getElementById("button-groen");
+        button3.addEventListener("click", function () {
+          veranderClass("blokje--groen");
+        });
+      };
+
+      // let maakRood = () => {
+      //     for (let i = 0; i < alleBlokjes.length; i++) {
+      //         let ditBlokje = alleBlokjes[i];
+      //         ditBlokje.className = "blokje--rood";
+      //     }
+      // };
+
+      // let maakBlauw = () => {
+      //     for (let i = 0; i < alleBlokjes.length; i++) {
+      //         let ditBlokje = alleBlokjes[i];
+      //         ditBlokje.className = "blokje--blauw";
+      //     }
+      // };
+
+      let veranderClass = (_classname) => {
+        for (let i = 0; i < alleBlokjes.length; i++) {
+          let ditBlokje = alleBlokjes[i];
+          ditBlokje.className = _classname;
+        }
+      };
+
+      // Dit wordt uitgevoerd als de pagina helemaal geladen is
+      document.addEventListener("DOMContentLoaded", function () {
+        start();
+      });
+    </script>
+  </head>
+
+  <body>
+    <section>
+      <div class="blokjes">Blokje 1</div>
+      <div class="blokjes">Blokje 2</div>
+      <div class="blokjes">Blokje 3</div>
+      <div class="blokjes">Blokje 4</div>
+      <div class="blokjes">Blokje 5</div>
+    </section>
+    <button id="button-rood">Maak alle blokjes rood</button>
+    <button id="button-blauw">Maak alle blokjes blauw</button>
+    <button id="button-groen">Maak alle blokjes groen</button>
+  </body>
+</html>
